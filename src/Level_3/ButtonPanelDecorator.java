@@ -14,7 +14,7 @@ public class ButtonPanelDecorator extends SpaceshipDecorator {
 
     public ButtonPanelDecorator(Spaceship gleebusShip) {
         super(gleebusShip);
-        this.image = new ImageIcon("src/Images/Game.Puzzle3/P3_ButtonPanel.png").getImage();
+        this.image = new ImageIcon("src/Images/Puzzle3/P3_ButtonPanel.png").getImage();
         this.visibility = false;
     }
 

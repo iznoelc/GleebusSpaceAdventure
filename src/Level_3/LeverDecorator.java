@@ -14,7 +14,7 @@ public class LeverDecorator extends SpaceshipDecorator {
 
     public LeverDecorator(Spaceship gleebusShip) {
         super(gleebusShip);
-        this.image = new ImageIcon("src/Images/Game.Puzzle3/P3_Lever.png").getImage();
+        this.image = new ImageIcon("src/Images/Puzzle3/P3_Lever.png").getImage();
         this.visibility = false;
     }
 
