@@ -1,4 +1,4 @@
-package Puzzle3;
+package Level_3;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,7 +16,7 @@ public class BrokenSpaceship implements Spaceship {
     boolean visibility;
 
     public BrokenSpaceship(){
-        this.image = new ImageIcon("src/Images/Puzzle3/P3_BaseSpaceship.png").getImage();
+        this.image = new ImageIcon("src/Images/Game.Puzzle3/P3_BaseSpaceship.png").getImage();
         this.visibility = true;
         this.imageID = "Broken Spaceship";
     }

@@ -1,4 +1,4 @@
-package Puzzle1;
+package Level_1;
 
 public class Map {
     //change these to be arraylists or just list

@@ -1,4 +1,4 @@
-//package Puzzle3;
+//package Game.Puzzle3;
 //
 //import javax.swing.*;
 //import java.awt.*;

@@ -1,4 +1,4 @@
-package Puzzle1;
+package Level_1;
 
 public class N implements Command{
     @Override

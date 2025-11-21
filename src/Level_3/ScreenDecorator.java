@@ -1,4 +1,4 @@
-package Puzzle3;
+package Level_3;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,7 +14,7 @@ public class ScreenDecorator extends SpaceshipDecorator {
 
     public ScreenDecorator(Spaceship gleebusShip) {
         super(gleebusShip);
-        this.image = new ImageIcon("src/Images/Puzzle3/P3_Screen.png").getImage();
+        this.image = new ImageIcon("src/Images/Game.Puzzle3/P3_Screen.png").getImage();
         this.visibility = false;
     }
 

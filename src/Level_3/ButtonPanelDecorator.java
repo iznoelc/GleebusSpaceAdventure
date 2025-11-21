@@ -1,20 +1,20 @@
-package Puzzle3;
+package Level_3;
 
 import javax.swing.*;
 import java.awt.*;
 
 /**
- * Concrete decorator to extend the spaceship decorator and add the lever component to the spaceship's
- * list of components in order to "decorate" the broken spaceship with the fixed lever.
+ * Concrete decorator to extend the spaceship decorator and add the button panel component to the spaceship's
+ * list of components in order to "decorate" the broken spaceship with the fixed button panel.
  * @author Izzy Carlson
  */
-public class LeverDecorator extends SpaceshipDecorator {
+public class ButtonPanelDecorator extends SpaceshipDecorator {
     private Image image;
     private boolean visibility;
 
-    public LeverDecorator(Spaceship gleebusShip) {
+    public ButtonPanelDecorator(Spaceship gleebusShip) {
         super(gleebusShip);
-        this.image = new ImageIcon("src/Images/Puzzle3/P3_Lever.png").getImage();
+        this.image = new ImageIcon("src/Images/Game.Puzzle3/P3_ButtonPanel.png").getImage();
         this.visibility = false;
     }
 
