@@ -18,24 +18,21 @@ public class NextCard {
      * @param width Button's width
      * @param height Button's height
      * @param nextCard The name of the card that the button should move to when clicked
+     * @param buttonFontSize The font size of the button
      * @return a JPanel with the next card button
      */
-    public JPanel getNextCardButtonPanel(Game parent, String buttonText, int width, int height, String nextCard){
-        JPanel buttonPanel = new JPanel();
-        JButton startButton = new JButton(buttonText);
-        startButton.setPreferredSize(new Dimension(width,height));
-        startButton.setFont(new Font("Dialog", Font.BOLD, 24));
+    public JButton getNextCardButton(Game parent, String buttonText, int width, int height, String nextCard, int buttonFontSize){
+        JButton nextCardButton = new JButton(buttonText);
+        nextCardButton.setPreferredSize(new Dimension(width,height));
+        nextCardButton.setFont(new Font("Dialog", Font.BOLD, buttonFontSize));
 
-        startButton.addActionListener(new ActionListener() {
+        nextCardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 parent.getCardLayout().show(parent.getCards(), nextCard);
             }
         });
 
-        buttonPanel.setLayout(new FlowLayout());
-        buttonPanel.add(startButton);
-
-        return buttonPanel;
+        return nextCardButton;
     }
 }

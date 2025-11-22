@@ -30,14 +30,16 @@ public class Start extends JPanel {
 
         // set up the START button
         NextCard nextCard = new NextCard();
-        JPanel buttonPanel = nextCard.getNextCardButtonPanel(parent, "START", 200, 75, "Level3");
-        buttonPanel.setOpaque(false);
-        buttonPanel.setBounds(0, 450, 1280, 100); // position at top
-        layeredPane.add(buttonPanel, JLayeredPane.PALETTE_LAYER);
+        JPanel nextCardButtonPanel = new JPanel(new FlowLayout());
+        JButton startButton = nextCard.getNextCardButton(parent, "START", 200, 75, "Backstory", 24);
+        nextCardButtonPanel.setOpaque(false);
+        nextCardButtonPanel.setBounds(0, 450, 1280, 100); // position at top
+        nextCardButtonPanel.add(startButton);
+        layeredPane.add(nextCardButtonPanel, JLayeredPane.PALETTE_LAYER);
     }
 
     /**
-     * Handles drawing images.
+     * Handles drawing the logo.
      */
     private class DrawPanel extends JPanel {
         protected void paintComponent(Graphics g) {
