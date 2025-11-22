@@ -12,28 +12,29 @@ import java.awt.*;
 public class Game extends JFrame {
     //variables for screen
     private JTextArea output_area;
+    CardLayout cardLayout = new CardLayout();
+    JPanel cards;
 
     public Game(){
         //game screen setup
-        JPanel cards;
 
-        setTitle("Gleebus's Space Adventure");
+        setTitle("Gleebus' Space Adventure");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1280, 720);
         setLocationRelativeTo(null);
 
-        CardLayout cardLayout = new CardLayout();
 
-        JPanel startCard = new Start();
+        JPanel startCard = new Start(this);
+        JPanel backstoryCard = new Backstory(this);
         JPanel level1 = new Level_1();
         JPanel level2 = new Level_2();
         JPanel level3 = new Level_3(this);
         JPanel level4 = new Level_4();
         JPanel endCard = new End();
 
-
         cards = new JPanel(cardLayout);
         cards.add(startCard, "Start");
+        cards.add(backstoryCard, "Backstory");
         cards.add(level1, "Level1");
         cards.add(level2, "Level2");
         cards.add(level3, "Level3");
@@ -42,7 +43,7 @@ public class Game extends JFrame {
 
         // FOR TESTING ->
         // change "Level3" to WHICHEVER LEVEL YOU WANT TO TEST
-        cardLayout.show(cards, "Level3");
+        cardLayout.show(cards, "Start");
 
 //        // Output area at bottom
 //        output_area = new JTextArea(5, 50);
@@ -51,6 +52,14 @@ public class Game extends JFrame {
 //        JScrollPane scrollPane = new JScrollPane(output_area);
 
         add(cards);
+    }
+
+    public CardLayout getCardLayout(){
+        return this.cardLayout;
+    }
+
+    public JPanel getCards(){
+        return this.cards;
     }
 
     public static void main(String[] args) {
@@ -62,6 +71,7 @@ public class Game extends JFrame {
             }
 
             Game demo = new Game();
+            demo.setResizable(false);
             demo.setVisible(true);
         });
     }

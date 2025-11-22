@@ -43,11 +43,11 @@ public class Level_3 extends JPanel {
         buttonPanel.setBounds(0, 320, 850, 100); // position at top
         layeredPane.add(buttonPanel, JLayeredPane.PALETTE_LAYER);
 
-        // set-up the base component for the decorator (gleebu' broken spaceship)
+        // set up the base component for the decorator (gleebu' broken spaceship)
         gleebusShip.addComponent();
         System.out.println("Gleebus ship : " + gleebusShip.getComponents().getFirst());
 
-        JPanel textPanel = getTextPanel(parent);
+        JPanel textPanel = getTextPanel();
         textPanel.setOpaque(false);
         textPanel.setBounds(0, 50, 850,300);
         layeredPane.add(textPanel, JLayeredPane.PALETTE_LAYER);
@@ -58,14 +58,11 @@ public class Level_3 extends JPanel {
         JButton repairButton = new JButton("REPAIR");
         repairButton.setPreferredSize(new Dimension(100,50));
         JPanel buttonPanel = new JPanel();
-        //buttonPanel.setLayout(null);
-        //myButton.setBounds(590,400,100,25);
         buttonPanel.setLayout(new FlowLayout());
 
         repairButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Code to execute when the button is clicked
                 System.out.println("Button was clicked!");
 
                 if ((hammer.isSelected() &&  wrench.isSelected() && !screwdriver.isSelected() && !pliers.isSelected())
@@ -121,7 +118,7 @@ public class Level_3 extends JPanel {
         return checkboxPanel;
     }
 
-    private JPanel getTextPanel(JFrame frame){
+    private JPanel getTextPanel(){
         JLabel title = new JLabel("REPAIR THE SPACESHIP CONTROL PANEL");
         title.setFont(new Font("Serif", Font.PLAIN, 40));
         title.setAlignmentX(JLabel.CENTER_ALIGNMENT);
